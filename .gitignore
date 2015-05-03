@@ -1,7 +1,13 @@
 *.class
 
 .classpath
+
 *.class
 bin
 *.log
 freedom*.ini
+.metadata
+
+#Netbeans
+nbproject
+build*
