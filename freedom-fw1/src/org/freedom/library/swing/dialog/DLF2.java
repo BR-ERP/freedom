@@ -404,10 +404,8 @@ public class DLF2 extends FFDialogo implements KeyListener, WindowFocusListener,
 				// Foi usada essa variavel booleana (blike) por que quando o
 				// campo estiver todo
 				// preenchido (do tamnho do length) nao eh preciso fazer LIKE.
-				sWhere += sSep + sNomeCampoAtual + ( bLike ? ( " LIKE '" + txtPesq.getVlrString().trim() + "%'" ) : ( "='" + txtPesq.getVlrString().trim() + "'" ) ) + " ORDER BY " + sNomeCampoAtual;
+                                sWhere += sSep +"cast("+sNomeCampoAtual+" as varchar(100) character set iso8859_1) collate pt_br LIKE '%" + txtPesq.getVlrString().trim() + "%'"  + " ORDER BY " + sNomeCampoAtual;
 				sqlF2 = cnF2.prepareStatement(sSqlF2 + sWhere);
-				// sqlF2.setString( 1, txtPesq.getVlrString().trim() + ( bLike ?
-				// "%" : "" ) );
 			}
 			else if (bString1) {
 				sOrderBy = " ORDER BY " + sNomeCampoAtual;
