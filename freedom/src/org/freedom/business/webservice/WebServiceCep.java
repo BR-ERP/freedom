@@ -451,7 +451,7 @@ public final class WebServiceCep {
 	 */
 	public boolean wasSuccessful() {
 
-		return ( resulCode == 1 && exception == null );
+            return ( ((resulCode == 1)||(resulCode == 2)) && exception == null );
 	}
 
 	/**
