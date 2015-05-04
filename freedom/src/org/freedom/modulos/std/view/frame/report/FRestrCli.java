@@ -50,7 +50,7 @@ public class FRestrCli extends FDetalhe implements CarregaListener, InsertListen
 
 	private JPanelPad pinDet = new JPanelPad();
 
-	private JTextFieldPad txtCodCli = new JTextFieldPad( JTextFieldPad.TP_INTEGER, 4, 0 );
+	private JTextFieldPad txtCodCli = new JTextFieldPad( JTextFieldPad.TP_INTEGER, 8, 0 );
 
 	private JTextFieldPad txtRazCli = new JTextFieldPad( JTextFieldPad.TP_STRING, 60, 0 );
 
