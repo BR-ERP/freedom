@@ -250,12 +250,15 @@ public class FManutRec extends FFilho implements ActionListener, CarregaListener
 	private JTextFieldPad txtCnpjCliManut = new JTextFieldPad( JTextFieldPad.TP_STRING, 14, 0 );
 
 	private JTextFieldFK txtRazCliManut = new JTextFieldFK( JTextFieldPad.TP_STRING, 60, 0 );
+	private JTextFieldFK txtNomeCliManut = new JTextFieldFK( JTextFieldPad.TP_STRING, 60, 0 );
 
 	private JTextFieldFK txtDtEmitManut = new JTextFieldFK( JTextFieldPad.TP_DATE, 10, 0 );
 
 	private JTextFieldFK txtRazCli = new JTextFieldFK( JTextFieldPad.TP_STRING, 60, 0 );
+	private JTextFieldFK txtNomeCli = new JTextFieldFK( JTextFieldPad.TP_STRING, 60, 0 );
 
 	private JTextFieldFK txtRazCliFiltro = new JTextFieldFK( JTextFieldPad.TP_STRING, 60, 0 );
+	private JTextFieldFK txtNomeCliFiltro = new JTextFieldFK( JTextFieldPad.TP_STRING, 60, 0 );
 
 	private JTextFieldFK txtRazCliBaixa = new JTextFieldFK( JTextFieldPad.TP_STRING, 60, 0 );
 
@@ -516,6 +519,7 @@ public class FManutRec extends FFilho implements ActionListener, CarregaListener
 
 		lcCli.add( new GuardaCampo( txtCodCli, "CodCli", "Cód.cli.", ListaCampos.DB_PK, false ) );
 		lcCli.add( new GuardaCampo( txtRazCli, "RazCli", "Razão social do clliente", ListaCampos.DB_SI, false ) );
+		lcCli.add( new GuardaCampo( txtNomeCli, "NomeCli", "Nome Fantasia do Cliente", ListaCampos.DB_SI, false ) );
 		lcCli.add( new GuardaCampo( txtCnpjCli, "CnpjCli", "CNPJ", ListaCampos.DB_SI, false ) );
 
 		lcCli.montaSql( false, "CLIENTE", "VD" );
@@ -847,6 +851,7 @@ public class FManutRec extends FFilho implements ActionListener, CarregaListener
 
 		lcCliFiltro.add( new GuardaCampo( txtCodCliFiltro, "CodCli", "Cód.cli.", ListaCampos.DB_PK, false ) );
 		lcCliFiltro.add( new GuardaCampo( txtRazCliFiltro, "RazCli", "Razão social do cliente", ListaCampos.DB_SI, false ) );
+		lcCliFiltro.add( new GuardaCampo( txtNomeCliFiltro, "RazCli", "Nome Fantasia", ListaCampos.DB_SI, false ) );
 		lcCliFiltro.add( new GuardaCampo( txtCnpjCliFiltro, "CnpjCli", "CNPJ", ListaCampos.DB_SI, false ) );
 		lcCliFiltro.montaSql( false, "CLIENTE", "VD" );
 		lcCliFiltro.setQueryCommit( false );
@@ -857,6 +862,7 @@ public class FManutRec extends FFilho implements ActionListener, CarregaListener
 
 		lcCliManut.add( new GuardaCampo( txtCodCliManut, "CodCli", "Cód.cli", ListaCampos.DB_PK, false ) );
 		lcCliManut.add( new GuardaCampo( txtRazCliManut, "RazCli", "Razão social do cliente", ListaCampos.DB_SI, false ) );
+		lcCliManut.add( new GuardaCampo( txtNomeCliManut, "NomeCli", "Nome Fantasia", ListaCampos.DB_SI, false ) );
 		lcCliManut.add( new GuardaCampo( txtCnpjCliManut, "CnpjCli", "CNPJ", ListaCampos.DB_SI, false ) );
 
 		lcCliManut.montaSql( false, "CLIENTE", "VD" );
